@@ -32,24 +32,22 @@ public class Object2Table {
      * 模板模式
      **/
     public static void template() throws IOException {
-
-        OrderDTO orderDTO = new OrderDTO("z234","结束");
+        // 任意对象
+        OrderDTO orderDTO = new OrderDTO("54320001","已过期");
+        // 创建模板set表头
         TableTemplateImpl tableTemplate = new TableTemplateImpl();
-        tableTemplate.setTableHead("单号","结果");
+        tableTemplate.setTableHead("单号","状态");
         TableResult4Template<TableTemplateImpl> tableResult =
                 TableResult4Template.builder()
                         .template(tableTemplate)
+                        // set对象的属性，对应表格的内容
                         .items(orderDTO.getOrderCode(),orderDTO.getStatus())
                         .build();
-
-
         String toolResult = tableResult.toJson();
-
         // 表格头及数据
         StringBuffer sBuffer = new StringBuffer();
         List<String> tableHead = dealTableHead2(toolResult);
         dealTableData2(toolResult,sBuffer);
-
         // 导出成excel
         String filePath = "D:\\模板设计模式" + System.currentTimeMillis()+".xls";
         export(tableHead,sBuffer,filePath);
