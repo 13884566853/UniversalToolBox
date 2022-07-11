@@ -20,7 +20,6 @@ public class HotDeploy {
      * 热加载Calculator接口的实现 反射方式
      **/
     public static void hotDeployWithReflect(String jarPath, URLClassLoader urlClassLoader) throws Exception {
-        // URLClassLoader urlClassLoader = new URLClassLoader(new URL[]{new URL(jarPath)}, Thread.currentThread().getContextClassLoader());
         Class clazz = urlClassLoader.loadClass("com.wwt.example.jvm.dynamicuploadjar.CalculatorImpl");
         Calculator calculator = (Calculator) clazz.newInstance();
         int result = calculator.add(1, 2);
