@@ -17,6 +17,7 @@ import java.util.concurrent.TimeUnit;
  * @author wwt
  * @title: Application
  * @description: 使用方法，用这个Application替代项目的启动类，就可以运行验证了
+ 关于加载哪个类，可以先改名打jar包，然后用Arthas看
  * @date 2022/6/25 13:43
  */
 @SpringBootApplication
