@@ -10,8 +10,5 @@
         <module name="UniversalToolBox" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="UniversalToolBox" target="8" />
-    </bytecodeTargetLevel>
   </component>
 </project>
