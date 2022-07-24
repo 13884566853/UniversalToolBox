@@ -1,26 +1,9 @@
 package com.wwt.example;
 
-import com.wwt.example.jvm.dynamicuploadjar.Calculator;
-import com.wwt.example.jvm.dynamicuploadjar.CalculatorImpl;
-import com.wwt.example.jvm.dynamicuploadjar.DeployUtils;
-import com.wwt.example.jvm.dynamicuploadjar.SpringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.support.BeanDefinitionBuilder;
-import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.io.IOException;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Set;
-import java.util.concurrent.TimeUnit;
-import java.util.jar.JarFile;
-
-import static com.wwt.example.jvm.dynamicuploadjar.HotDeploy.hotDeployWithReflect;
-
 /**
  * @author wwt
  * @title: Application
