@@ -1,4 +1,4 @@
-package com.wwt.example.designmode;
+package com.wwt.example.designmode.behiver.observerpattern;
 
 import java.util.Date;
 import java.util.Observable;
@@ -10,7 +10,7 @@ import java.util.Observable;
  * @date 2022/8/27 14:53
  */
 public class ObserverPattern {
-    public static void main(String[] args) {
+/*    public static void main(String[] args) {
         Subject subject = new Subject();
         subject.addObserver((o, arg) -> System.out.println("监听到变化，并得到参数："+arg));
         //注意这里的Observer是java.util包下提供的
@@ -18,7 +18,7 @@ public class ObserverPattern {
         subject.modify();
         //进行修改操作
         subject.modifyWithArg("test");
-    }
+    }*/
 }
 class Subject extends Observable {   //继承此抽象类表示支持观察者
 
